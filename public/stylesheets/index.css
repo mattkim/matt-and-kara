@@ -2160,3 +2160,133 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 .mk-img-md {
     width: 100px;
 }
+
+.countdown-title1 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.countdown-title1:before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url(../ico-bird-r.png) no-repeat center center;
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    margin-right: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    left: 0;
+}
+
+.countdown-title1:after {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url(../ico-bird-l.png) no-repeat center center;
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    margin-left: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    right: 0;
+}
+
+.countdown-title-borders {
+    font-family: sans-serif;
+}
+
+.countdown-title-borders:before {
+    width: 60px;
+    content: '';
+    display: inline-block;
+    border-top: 1px solid #fff;
+    margin-right: 5px;
+    height: 6px;
+    opacity: .8;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.countdown-title-borders:after {
+    width: 60px;
+    content: '';
+    display: inline-block;
+    border-top: 1px solid #fff;
+    margin-left: 5px;
+    height: 6px;
+    opacity: .8;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.countdown-title-borders:hover:before {
+    width: 80px;
+}
+
+.countdown-title-borders:hover:after {
+    width: 80px;
+}
+
+.countdown-title1:hover:before {
+    transform: translate(-10px, -10px) rotate(45deg);
+}
+
+.countdown-title1:hover:after {
+    transform: translate(10px, -10px)  rotate(-45deg);
+}
+
+/* Ceremony title */
+/* @media (min-width: 992px) {
+    .title1 {
+        font-size: 60px;
+        margin: 0px;
+        padding: 0px;
+    }
+} */
+
+.title1 {
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title1 {
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+}
+
+/* .title1-border::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 37px;
+    margin-top: 12px;
+    background: url(../border1.png) center center no-repeat;
+    filter: grayscale(100%);
+} */
+
+.block-logo {
+    height: 15em;
+    text-align: center;
+    padding: 4em;
+    width: 50%;
+}
+
+.block-logo {
+    background-color: #FFF;
+    border-radius: 10px;
+    display: table-cell;
+    height: 10em;
+    text-align: center;
+    padding: 4em;
+    vertical-align: middle;
+    width: 50%;
+}

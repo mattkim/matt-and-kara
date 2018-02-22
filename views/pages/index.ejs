@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html>
-<title>M K PORTFOLIO</title>
+<title>Matt & Kara</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="stylesheets/index.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="favicon.ico">
 <link rel="manifest" href="manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
 <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
     body, html {
@@ -32,7 +25,7 @@
     }
 
     /* Create a Parallax Effect */
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -41,20 +34,30 @@
 
     /* First image (Logo. Full height) */
     .bgimg-1 {
-        background-image: url('https://s3.amazonaws.com/mattkim-portfolio/pexels-photo-38892.jpeg');
+        background-image: url('https://s3.amazonaws.com/matt-and-kara/Matt-Kara-Engagement-092.jpg');
         min-height: 100%;
     }
 
     /* Second image (Portfolio) */
     .bgimg-2 {
-        background-image: url("https://s3.amazonaws.com/mattkim-portfolio/pexels-photo-302899.jpeg");
+        background-image: url("https://s3.amazonaws.com/matt-and-kara/Matt-Kara-Engagement-001.jpg");
         min-height: 400px;
     }
 
     /* Third image (Contact) */
     .bgimg-3 {
-        background-image: url("https://s3.amazonaws.com/mattkim-portfolio/pexels-photo-golden-gate-bridge.jpg");
+        background-image: url("https://s3.amazonaws.com/matt-and-kara/Matt-Kara-Engagement-012.jpg");
         min-height: 400px;
+    }
+
+    .bgimg-4 {
+        background-image: url("https://s3.amazonaws.com/matt-and-kara/Matt-Kara-Engagement-089.jpg");
+        min-height: 500px;
+    }
+
+    .bgimg-5 {
+        background-image: url("https://s3.amazonaws.com/matt-and-kara/pexels-photo-264787.jpeg");
+        min-height: 500px;
     }
 
     .w3-wide {letter-spacing: 10px;}
@@ -62,7 +65,7 @@
 
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1024px) {
-        .bgimg-1, .bgimg-2, .bgimg-3 {
+        .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
             background-attachment: scroll;
         }
     }
@@ -74,88 +77,177 @@
     <ul class="w3-navbar" id="myNavbar">
         <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
             <a class="w3-hover-airbnb" href="javascript:void(0);" onclick="toggleFunction('navDemo')" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars" style="color:gray"></i>
             </a>
         </li>
-        <li class="w3-left-align"><a class="w3-hover-airbnb" onclick="scrollToElementId('home', 5)">HOME</a></li>
-        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('about', 5)"><i class="fa fa-user"></i> ABOUT</a></li>
-        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('blog', 5)"><i class="fa fa-th"></i> BLOG</a></li>
-        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('contact', 5)"><i class="fa fa-envelope"></i> CONTACT</a></li>
+        <li class="w3-left-align"><a class="w3-hover-airbnb" onclick="scrollToElementId('home', 5)" style="color:gray">HOME</a></li>
+        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('about', 5)" style="color:gray">CEREMONY</a></li>
+        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('hotels', 5)" style="color:gray">HOTELS</a></li>
+        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('blog', 5)" style="color:gray">REGISTRY</a></li>
+        <li class="w3-hide-small"><a class="w3-hover-airbnb" onclick="scrollToElementId('contact', 5)" style="color:gray">RSVP</a></li>
     </ul>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-border" onclick="toggleFunction('navDemo')">
         <ul class="w3-navbar w3-left-align w3-white">
-            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('about', 5)">ABOUT</a></li>
-            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('blog', 5)">BLOG</a></li>
-            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('contact', 5)">CONTACT</a></li>
+            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('about', 5)">CEREMONY</a></li>
+            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('hotels', 5)">HOTELS</a></li>
+            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('blog', 5)">REGISTRY</a></li>
+            <li><a class="w3-hover-airbnb" onclick="scrollToElementId('contact', 5)">RSVP</a></li>
         </ul>
     </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-xlarge mk-teal-blue-gradient w3-xlarge w3-wide w3-animate-opacity">M <span class="w3-hide-small">K</span> PORTFOLIO</span>
+<!--style="white-space:nowrap;font-family:'Great Vibes',cursive;"-->
+<div class="bgimg-1 w3-display-container" id="home">
+    
+    <div class="w3-display-middle">
+        <div style="background-color:rgba(33, 33, 33, 0.4);padding:75px;min-width:900px">
+            <div class="w3-center" style="white-space:nowrap;font-family: 'Great Vibes', cursive;font-size:90px;color:white">
+                Matt & Kara
+            </div>
+            <div class="w3-center" style="margin:0px;padding-bottom:20px">
+                <img src="ico-heart2.png" alt="">
+            </div>
+            <div class="w3-center">
+                <span class="countdown-title1" style="white-space:nowrap;">
+                    <span class="countdown-title-borders w3-wide" style="color:white;white-space:nowrap;">
+                        MAY 19, 2018 IN SEATTLE
+                    </span>
+                </span>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">ABOUT ME</h3>
-    <p>Welcome to my portfolio, where you can find my blog and current projects I am working on.  By trade I am a software developer, and had my education at University of California, San Diego where I received a degree in Bachelors of Science, Computer Science.  I have a passion for world-class engineering and design coupled with a belief in hard work and high quality.</p>
-    <div class="w3-row">
+    <div class="w3-row w3-center">
+        <h3 class="w3-center title1 couple-title1 title1-border">Ceremony</h3>
+    </div>
+    <div class="w3-row w3-center">
+        <img src="border1.png" style="width:100%;filter: invert(100%) grayscale(50%);display:block;margin:auto;">
+    </div>
+    <div class="w3-row w3-center">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <p class="w3-xlarge"><b><i class="fa fa-user w3-margin-right"></i>Matt Kim</b></p><br>
-            <img src="https://s3.amazonaws.com/mattkim-portfolio/mattkim_fb_profile.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+            <span style="font-size:40px">May 19</span><br/>
+            <span style="font-family: 'Lobster', cursive;font-size:40px">Saturday</span><br/>
+            <span style="font-size:40px">2018</span>
         </div>
 
         <!-- Hide this text on small devices -->
         <div class="w3-col m6 w3-padding-large">
-            <p class="w3-large w3-center w3-padding-16">Experience:</p>
-            <p class="w3-medium"><i class="fa fa-car"></i>&nbsp;&nbsp;Uber</p>
-            <div class="w3-progress-container">
-                <div class="w3-progressbar" style="width:25%"></div>
-            </div>
-            <p class="w3-medium"><i class="fa fa-amazon"></i>&nbsp;&nbsp;Amazon</p>
-            <div class="w3-progress-container">
-                <div class="w3-progressbar" style="width:100%"></div>
-            </div>
-            <p class="w3-medium"><i class="fa fa-university"></i>&nbsp;&nbsp;UCSD, Computer Science</p>
-            <div class="w3-progress-container">
-                <div class="w3-progressbar" style="width:100%"></div>
-            </div>
-            <p class="w3-padding-16">
-                <a href="https://www.linkedin.com/in/matthew-kim-7b177918" target="_blank">
-                    https://www.linkedin.com/in/matthew-kim-7b177918
-                </a>
-            </p>
+            <a href="https://www.google.com/maps/place/Court+in+the+square/@47.5987391,-122.3341717,17z/data=!3m1!4b1!4m5!3m4!1s0x54906aa4b6feba7b:0xd83cf5d0a133e75b!8m2!3d47.5987391!4d-122.331983"
+                target="_blank"
+            >
+                <span style="font-size:20px">401 2nd Ave S, Seattle, WA 98104</span><br/>
+            </a>
+            <span style="font-family: 'Lobster', cursive;font-size:40px">Court in the Square</span><br/>
+            <span style="font-size:40px">4:30 PM</span><br/>
+            <span style="font-size:20px">DINNER + RECEPTION</span>
         </div>
     </div>
+
+    <div class="w3-row w3-center w3-margin-top">
+        <a onclick="scrollToElementId('contact', 5)">
+            <button class="w3-btn w3-round-jumbo w3-hover-airbnb w3-light-grey w3-padding">
+                <span style="font-size:15px">
+                    <i class="fa fa-envelope"></i> Click here to RSVP today
+                </span>
+            </button>
+        </a>
+    </div>
+    
 </div>
 
 <!-- Second Parallax Image with BLOG Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-light-grey w3-wide">BLOG</span>
+        <span class="w3-wide">
+            <span style="font-family: san-serif, cursive;font-size:90px;color:white;">Hotels</span><br/>
+        </span>
+    </div>
+</div>
+
+
+<!-- Container (BLOG Section) -->
+<div class="w3-content w3-container" id="hotels">
+    <div class="w3-center w3-row w3-padding-32 w3-section">
+        <span style="font-size:18px">
+            <span style="font-family: 'Lobster', cursive;font-size:40px">We've reserved some hotels for you.</span><br/><br/>
+            These rates are locked in until 04/17/18.<br/>
+            Please let us know if you need other hotel arrangements.
+        </span>
+    </div>
+    <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m6 w3-container">
+            <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=The+Fong+%26+Kim+Wedding+Room+Block%5Eseacd%60fkwfkwa%60219%60USD%60false%605%605%2F17%2F18%605%2F21%2F18%604%2F17%2F18&app=resvlink&stop_mobi=yes"
+                class="w3-center" target="_blank"
+                style="text-decoration: none;"
+            >
+                <img src="https://s3.amazonaws.com/matt-and-kara/courtyard_marriot_slu.jpg" alt="Logo" style="width:100%;">
+            </a>
+            <br/>
+            <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=The+Fong+%26+Kim+Wedding+Room+Block%5Eseacd%60fkwfkwa%60219%60USD%60false%605%605%2F17%2F18%605%2F21%2F18%604%2F17%2F18&app=resvlink&stop_mobi=yes"
+                target="_blank"
+            >
+            <span style="font-size:20px">Courtyard Marriott South Lake Union</span><br/>
+            </a>
+            <span>$219 / night</span><br/>
+            <span>Rooms available from 05/17/18 to 05/21/18</span><br/>
+            <span>Book by 04/17/18</span><br/>
+            
+        </div>
+        <div class="w3-col m6 w3-container">
+            <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Fong%2FKim+Wedding%5Ebvuch%60fkwfkwa%60109%60USD%60false%603%605%2F17%2F18%605%2F21%2F18%604%2F17%2F18&app=resvlink&stop_mobi=yes"
+                class="w3-center" target="_blank"
+                style="text-decoration: none;"
+            >
+                <img src="https://s3.amazonaws.com/matt-and-kara/courtyard_marriot_bellevue_redmond.jpg" alt="Logo" style="width:100%;">
+            </a>
+            <br/>
+            <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Fong%2FKim+Wedding%5Ebvuch%60fkwfkwa%60109%60USD%60false%603%605%2F17%2F18%605%2F21%2F18%604%2F17%2F18&app=resvlink&stop_mobi=yes"
+                target="_blank"
+            >
+            <span style="font-size:20px">Courtyard Marriott Bellevue / Redmond</span><br/>
+            </a>
+            <span>$109 / night</span><br/>
+            <span>Rooms available from 05/17/18 to 05/21/18</span><br/>
+            <span>Book by 04/17/18</span><br/>
+        </div>
+    </div>
+</div>
+
+
+<!-- Second Parallax Image with BLOG Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+        <span class="w3-wide">
+            <span style="font-family: san-serif, cursive;font-size:90px;color:white;">Registry</span><br/>
+        </span>
     </div>
 </div>
 
 <!-- Container (BLOG Section) -->
-<div class="w3-content w3-container w3-padding-64" id="blog">
-    <img class="mk-img-center mk-img-md" src="http://iosicongallery.com/img/512/medium-2015.png" />
-    <p class="w3-large w3-center w3-padding-16">
-        <a target="_blank" href="https://medium.com/@matthkim/if-you-code-you-should-read-14370e6b275c#.oa5n4bhdw">If you code, you should read</a>
-    </p>
-    <p>
-        Coming out of college, I was probably the least well read person I knew. I spent most of my time watching videos rather than reading. At some level I was even proud of this, thinking that video was just a better form of artistic expression.
-        <br/><br/>
-        But once I started working at Amazon, I met a much more diverse set of smart people, a lot of whom read all the time. Specifically, my first mentor was someone who would rather spend their afternoons reading Game of Thrones as opposed to watching it. I might’ve actually thought this was lame on first impression, but I started to notice how their reading instincts made them a strong performing software engineer. When I had a question about how our system performed, they would crack open our internal Code Browser and just read through hundreds of lines of code extremely quickly. I realized it was because they had already spent the time to read through this code beforehand that they could do this. It was like reading through a book you’ve already read...
-    </p>
-    <div class="w3-center">
-        <a target="_blank" href="https://medium.com/@matthkim/if-you-code-you-should-read-14370e6b275c#.oa5n4bhdw">
-            <button class="w3-btn w3-round-jumbo w3-hover-airbnb w3-light-grey w3-padding-xlarge" style="margin-top:32px">READ MORE</button>
-        </a>
+<div class="w3-content w3-container" id="blog">
+    <div class="w3-center w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container"></div>
+            <div class="w3-col m4 w3-container">
+                <a href="https://www.amazon.com/wedding/matt-kim-kara-fong-seattle-may-2018/registry/1SUANDV8IS7GH" class="w3-center" target="_blank"
+                    style="text-decoration: none;"
+                >
+                    <img src="https://s3-us-west-2.amazonaws.com/kelron-play-2/amazon_logo.jpg" alt="Logo"
+                        style="width:100%;border: 0px solid #CCCCCC;border-radius:10px;padding:20px;box-shadow:rgba(0, 0, 0, 0.07) 16px 16px 47px 2px;"
+                    >
+                </a>
+                <br/>
+                <br/>
+                <span style="font-size:18px">
+                    Here is our wedding wishlist. We've handpicked a few items that we could use as we start this new exciting chapter in our lives together.
+                </span>
+            </div>
+            <div class="w3-col m4 w3-container"></div>
     </div>
 </div>
 
@@ -171,36 +263,58 @@
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+        <span class="w3-wide">
+            <span style="font-family: san-serif, cursive;font-size:90px;color:white;">RSVP</span><br/>
+        </span>
     </div>
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
+<div class="w3-content w3-container" id="contact">
     <div class="w3-row w3-padding-32 w3-section">
         <div class="w3-col m4 w3-container">
             <!-- Add Google Maps -->
             <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
         </div>
         <div class="w3-col m8 w3-container w3-section">
-            <div class="w3-large w3-margin-bottom">
-                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> San Francisco<br>
-                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> matthkim@gmail.com<br>
-            </div>
-            <p>Leave a message:</p>
-            <form action="mailto:matthkim@gmail.com" method="post" enctype="text/plain">
+            <p>Submit 1 RSVP per person that will be attending. Thanks!</p>
+                          
+            <form action="https://docs.google.com/forms/d/1kgbLIBZCHioTfDxHbeK-qkAlzGHU4G1GYs2hxv32d70/formResponse" method="POST" target="_self" onsubmit="">
                 <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                     <div class="w3-half w3-padding-8">
-                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Name" required name="Name">
+                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="First Name" required name="entry.1232983761">
                     </div>
                     <div class="w3-half w3-padding-8">
-                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Email" required name="Email">
+                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Last Name" required name="entry.1675016483">
                     </div>
                 </div>
-                <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Message" required name="Message">
-
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half w3-padding-8">
+                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Email" name="entry.927893424">
+                    </div>
+                    <div class="w3-half w3-padding-8">
+                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Phone" name="entry.1713008010">
+                    </div>
+                </div>
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half w3-padding-8">
+                        <input class="w3-input w3-border w3-round-medium" type="text" placeholder="Food Allergies" name="entry.2117749540">
+                    </div>
+                </div>
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half w3-padding-8" style="float:left;clear:none;overflow:hidden">
+                        Will you be attending?<br/>
+                        <label class="radio-inline">
+                            <input type="radio" name="entry.153590262" value="Accept" required>Accept
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="entry.153590262" value="Decline">Decline
+                        </label>
+                    </div>
+                </div>
+                
                 <button class="w3-btn w3-round-jumbo w3-hover-airbnb w3-light-grey w3-right w3-padding w3-section">
-                    SEND MESSAGE
+                    Submit
                 </button>
             </form>
         </div>
@@ -208,25 +322,23 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-center mk-teal-blue-gradient w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer class="bgimg-4 w3-center w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a onclick="scrollToElementId('home', 5)">
         <button class="w3-btn w3-round-jumbo w3-hover-airbnb w3-light-grey w3-padding">
             <i class="fa fa-arrow-up w3-margin-right"></i> TOP
         </button>
     </a>
-    <p>&copy; Matt Kim</p>
 </footer>
 
 <!-- Add Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9baFqNQmDduTYhSverOomvUqpHqBPgnc&callback=initMap"></script>
 <script>
-  <!-- Google Map Location -->
-  var myCenter = new google.maps.LatLng(37.773972, -122.431297);
+  var myCenter = new google.maps.LatLng(47.598842, -122.332076);
 
   function initialize() {
     var mapProp = {
       center: myCenter,
-      zoom: 12,
+      zoom: 14,
       scrollwheel: false,
       draggable: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
